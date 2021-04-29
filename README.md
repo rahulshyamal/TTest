@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/rshyamal/TestCI/_apis/build/status/rahulshyamal.TTest?branchName=master)](https://dev.azure.com/rshyamal/TestCI/_build/latest?definitionId=1&branchName=master)
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/rahulshyamal/TTest/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
