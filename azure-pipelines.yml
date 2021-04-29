@@ -1,16 +1,14 @@
 trigger:
 - master
 
-pool: pool1
 - task: CmdLine@2
-  displayName: 'Run Tosca CI'
   inputs:
-    script: '$(Agent.HomeDirectory)\\ToscaCI\\Client\\ToscaCIClient.exe -m distributed -t junit -r $(Agent.HomeDirectory)\\ToscaCI.xml'
+    script: 'C:\Users\rahsh\Downloads\vsts-agent-win-x64-2.185.1\_workToscaCI\Client\ToscaCIClient.exe -m distributed -t junit -r C:\Users\rahsh\Downloads\vsts-agent-win-x64-2.185.1\ToscaCI.xml'
+    workingDirectory: 'C:\Users\rahsh\Downloads\vsts-agent-win-x64-2.185.1'
     
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/ToscaCI*.xml'
-    searchFolder: '$(Agent.HomeDirectory)'
+    testResultsFiles: '**/TEST-*.xml'
     failTaskOnFailedTests: true
     testRunTitle: 'Publish ToscaCI Test Results'
